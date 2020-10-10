@@ -112,10 +112,3 @@ license.txt
 exports
 .cache
 build
-packages/strapi/data
-
-############################
-# Next.js
-############################
-
-.next

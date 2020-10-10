@@ -3,6 +3,12 @@
   "description": "Sample application which shows how to build monorepos using Lerna",
   "license": "MIT",
   "author": "nirmalya.email@gmail.com",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "dev": "lerna run dev",
+    "link": "lerna link convert"
+  },
   "devDependencies": {
     "@release-it/conventional-changelog": "^2.0.0",
     "husky": "^4.3.0",
@@ -20,8 +26,5 @@
     "*.{js,json,css,md,tsx,ts}": [
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "swr-nextjs": "file:packages/swr-nextjs"
   }
 }

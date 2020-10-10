@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  backend:
+    image: strapi/strapi
+    container_name: swr-vs-react-query-strapi-backend
+    depends_on:
+      - db
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    ports:
+      - "1337:1337"
+    restart: on-failure
+    volumes:
+      - ./app:/srv/app
+
+  db:
+    container_name: swr-vs-react-query-strapi-db
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: unless-stopped
