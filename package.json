@@ -14,13 +14,11 @@
     "link": "lerna link convert"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^2.0.0",
     "husky": "^4.3.0",
     "lerna": "^3.20.2",
     "lint-staged": "^10.4.0",
     "microbundle": "^0.12.4",
-    "prettier": "^2.1.2",
-    "release-it": "^14.0.4"
+    "prettier": "^2.1.2"
   },
   "husky": {
     "hooks": {

@@ -20,22 +20,12 @@ This is a sample application to demonstrate the difference between SWR and React
 
 - [Overview](#overview)
 - [Requirements](#requirements)
-- [Packages](#packages)
-  - [1. **Frontend**: Next.js application](#1-frontend-nextjs-application)
-  - [2. **Backend**: Dockerized Hasura application](#2-backend-dockerized-hasura-application)
 - [Installation](#installation)
   - [1. **Clone the application**](#1-clone-the-application)
-  - [2. **Install necessary dependencies for the frontend application**](#2-install-necessary-dependencies-for-the-frontend-application)
-  - [3. **Create a .env file and copy the contents from .env.example (present in frontend directory)**](#3-create-a-env-file-and-copy-the-contents-from-envexample-present-in-frontend-directory)
-  - [4. **Generate the RSA keys**](#4-generate-the-rsa-keys)
-  - [5. **Print the keys in the escaped format**](#5-print-the-keys-in-the-escaped-format)
-  - [6. **Copy the value of the key into the `AUTH_PRIVATE_KEY` key (in the .env file)**](#6-copy-the-value-of-the-key-into-the-auth_private_key-key-in-the-env-file)
-  - [7. **Start the frontend application**](#7-start-the-frontend-application)
-  - [8. **Go inside the directory of the backend package on another terminal window**](#8-go-inside-the-directory-of-the-backend-package-on-another-terminal-window)
-  - [9. **Start docker-compose**](#9-start-docker-compose)
-- [Deployment](#deployment)
-  - [Frontend application](#frontend-application)
-  - [Backend application](#backend-application)
+  - [2. **Install necessary dependencies**](#2-install-necessary-dependencies)
+  - [3. **Start the applications**](#3-start-the-applications)
+  - [4. **Go inside the directory of the Strapi package on another terminal window**](#4-go-inside-the-directory-of-the-strapi-package-on-another-terminal-window)
+  - [5. **Start docker-compose**](#5-start-docker-compose)
 - [Other interesting repositories](#other-interesting-repositories)
 - [License](#license)
 
@@ -86,7 +76,7 @@ The above command will start the **swr-nextjs** application on [http://localhost
 cd packages/strapi
 ```
 
-### 11. **Start docker-compose**
+### 5. **Start docker-compose**
 
 ```sh
 docker-compose up
