@@ -1,6 +1,6 @@
 import { QueryCache, useQuery } from "react-query";
 import { dehydrate } from "react-query/hydration";
-import getPosts from "../lib/get-posts";
+import getPosts from "../lib/get-posts-rest";
 
 export default function RestPage() {
   // Setting the `staleTime` to `Infinity` will ensure that the `query` never goes stale.

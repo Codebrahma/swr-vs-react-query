@@ -1,6 +1,6 @@
 import { QueryCache, useQuery } from "react-query";
 import { dehydrate } from "react-query/hydration";
-import getPosts from "../lib/get-posts";
+import getPosts from "../lib/get-posts-graphql";
 
 export default function GraphQLPage() {
   // Setting the `staleTime` to `Infinity` will ensure that the `query` never goes stale.
@@ -8,14 +8,24 @@ export default function GraphQLPage() {
 
   // Option 1: Prefetching the data ourself and pass it in as `initialData`. In this case, the prop posts should be passed from `getServerSideProps`. Our function should look like: `export default function IndexPage({ posts }) {`
   // 👀 https://react-query.tanstack.com/docs/guides/ssr#prefetch-the-data-yourself-and-pass-it-in-as-initialdata
-  // const { data } = useQuery("posts", getPosts, {
+  // const { status, data, error, isFetching } = useQuery("posts", getPosts, {
   //   initialData: posts,
   //   staleTime: Infinity,
   // });
 
   // Option 2: Prefetching the query via React Query and use `de/rehydration`
   // 👀 https://react-query.tanstack.com/docs/guides/ssr#prefetch-the-query-via-react-query-and-use-derehydration
-  const { data } = useQuery("posts", getPosts, { staleTime: Infinity });
+  const { status, data, error, isFetching } = useQuery("posts", getPosts, {
+    staleTime: Infinity,
+  });
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "error") {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className="container">
@@ -27,6 +37,7 @@ export default function GraphQLPage() {
           </div>
         );
       })}
+      {isFetching && <span>Updaing data...</span>}
       <style jsx>{`
         .container {
           max-width: 600px;
