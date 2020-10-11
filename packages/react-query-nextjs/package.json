@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "react-query-nextjs",
+  "name": "@apps/react-query-nextjs",
   "version": "0.0.1",
   "scripts": {
     "build": "next build",
@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "next": "9.5.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-query": "^2.23.1",
+    "@apps/components": "0.0.1"
   }
 }

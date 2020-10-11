@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "@apps/components",
+  "version": "0.0.1",
+  "dependencies": {
+    "next": "9.5.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "scripts": {
+    "build": "microbundle build --jsx React.createElement",
+    "dev": "microbundle watch --jsx  React.createElement --no-compress"
+  },
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "esmodule": "dist/index.modern.js",
+  "files": [
+    "dist"
+  ]
+}

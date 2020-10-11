@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "swr-nextjs",
+  "name": "@apps/swr-nextjs",
   "version": "0.0.1",
   "scripts": {
     "build": "next build",

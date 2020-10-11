@@ -1,12 +1,16 @@
 {
-  "name": "building-monorepos-using-lerna",
-  "description": "Sample application which shows how to build monorepos using Lerna",
+  "private": true,
+  "name": "swr-vs-react-query",
+  "description": "Sample application to demonstrate the difference between SWR and react-query",
   "license": "MIT",
   "author": "nirmalya.email@gmail.com",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean",
-    "dev": "lerna run dev",
+    "clean": "lerna clean -y",
+    "dev": "lerna run dev --stream --parallel",
     "link": "lerna link convert"
   },
   "devDependencies": {
@@ -14,6 +18,7 @@
     "husky": "^4.3.0",
     "lerna": "^3.20.2",
     "lint-staged": "^10.4.0",
+    "microbundle": "^0.12.4",
     "prettier": "^2.1.2",
     "release-it": "^14.0.4"
   },
