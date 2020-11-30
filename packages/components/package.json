@@ -3,9 +3,10 @@
   "name": "@apps/components",
   "version": "0.0.1",
   "dependencies": {
-    "next": "9.5.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "microbundle": "^0.12.4",
+    "next": "10.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "scripts": {
     "build": "microbundle build --jsx React.createElement",
