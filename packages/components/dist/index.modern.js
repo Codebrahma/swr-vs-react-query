@@ -1,16 +1,21 @@
 import Link from "next/link";
 import React from "react";
 
+var styles = {
+  navbar: "_index-module__navbar__2y2FY",
+  container: "_index-module__container__1Ee05",
+};
+
 function Navbar() {
   return /*#__PURE__*/ React.createElement(
     "div",
     {
-      className: "navbar",
+      className: styles.navbar,
     },
     /*#__PURE__*/ React.createElement(
       "div",
       {
-        className: "container",
+        className: styles.container,
       },
       /*#__PURE__*/ React.createElement(
         "ul",
@@ -38,32 +43,6 @@ function Navbar() {
           )
         )
       )
-    ),
-    /*#__PURE__*/ React.createElement(
-      "style",
-      {
-        jsx: true,
-      },
-      `
-        .navbar {
-          border-bottom: 1px solid #eee;
-        }
-
-        .container {
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .navbar ul {
-          list-style-type: none;
-          padding: 0;
-          display: flex;
-        }
-
-        .navbar ul > li:not(:last-child) {
-          margin-right: 20px;
-        }
-      `
     )
   );
 }

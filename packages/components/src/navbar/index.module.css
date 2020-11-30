@@ -1,0 +1,24 @@
+.navbar {
+  border-bottom: 1px solid #eee;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul > li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navbar ul > li > a {
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}

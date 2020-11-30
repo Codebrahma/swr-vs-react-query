@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "microbundle build --jsx React.createElement",
-    "dev": "microbundle watch --jsx  React.createElement --no-compress"
+    "dev": "microbundle watch --jsx  React.createElement --css-modules --no-compress"
   },
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",

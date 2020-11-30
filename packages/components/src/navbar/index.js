@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
+import styles from "./index.module.css";
+
 export function Navbar() {
   return (
-    <div className="navbar">
-      <div className="container">
+    <div className={styles.navbar}>
+      <div className={styles.container}>
         <ul>
           <li>
             <Link href="/">
@@ -18,26 +20,6 @@ export function Navbar() {
           </li>
         </ul>
       </div>
-      <style jsx>{`
-        .navbar {
-          border-bottom: 1px solid #eee;
-        }
-
-        .container {
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .navbar ul {
-          list-style-type: none;
-          padding: 0;
-          display: flex;
-        }
-
-        .navbar ul > li:not(:last-child) {
-          margin-right: 20px;
-        }
-      `}</style>
     </div>
   );
 }

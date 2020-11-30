@@ -1,0 +1,24 @@
+._index-module__navbar__2y2FY {
+  border-bottom: 1px solid #eee;
+}
+
+._index-module__container__1Ee05 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+._index-module__navbar__2y2FY ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+._index-module__navbar__2y2FY ul > li:not(:last-child) {
+  margin-right: 20px;
+}
+
+._index-module__navbar__2y2FY ul > li > a {
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}

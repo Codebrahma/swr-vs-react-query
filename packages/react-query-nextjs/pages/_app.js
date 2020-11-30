@@ -4,6 +4,9 @@ import { ReactQueryCacheProvider, QueryCache } from "react-query";
 import { Hydrate } from "react-query/hydration";
 import { Navbar } from "@apps/components";
 
+import "../assets/styles.css";
+import "@apps/components/dist/index.css";
+
 // 👀 https://react-query.tanstack.com/docs/api#querycache
 const queryCache = new QueryCache();
 

@@ -27,16 +27,6 @@ export default function RestPage() {
           </div>
         );
       })}
-      <style jsx>{`
-        .container {
-          max-width: 600px;
-          margin: 50px auto;
-        }
-
-        .post:not(:last-child) {
-          margin-bottom: 50px;
-        }
-      `}</style>
     </div>
   );
 }

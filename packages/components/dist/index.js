@@ -5,16 +5,21 @@ function _interopDefault(ex) {
 var Link = _interopDefault(require("next/link"));
 var React = _interopDefault(require("react"));
 
+var styles = {
+  navbar: "_index-module__navbar__2y2FY",
+  container: "_index-module__container__1Ee05",
+};
+
 function Navbar() {
   return /*#__PURE__*/ React.createElement(
     "div",
     {
-      className: "navbar",
+      className: styles.navbar,
     },
     /*#__PURE__*/ React.createElement(
       "div",
       {
-        className: "container",
+        className: styles.container,
       },
       /*#__PURE__*/ React.createElement(
         "ul",
@@ -42,13 +47,6 @@ function Navbar() {
           )
         )
       )
-    ),
-    /*#__PURE__*/ React.createElement(
-      "style",
-      {
-        jsx: true,
-      },
-      "\n        .navbar {\n          border-bottom: 1px solid #eee;\n        }\n\n        .container {\n          max-width: 600px;\n          margin: 0 auto;\n        }\n\n        .navbar ul {\n          list-style-type: none;\n          padding: 0;\n          display: flex;\n        }\n\n        .navbar ul > li:not(:last-child) {\n          margin-right: 20px;\n        }\n      "
     )
   );
 }

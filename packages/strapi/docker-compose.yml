@@ -15,7 +15,6 @@ services:
       DATABASE_PASSWORD: strapi
     ports:
       - "1337:1337"
-    restart: on-failure
     volumes:
       - ./app:/srv/app
 
@@ -30,4 +29,3 @@ services:
       POSTGRES_PASSWORD: strapi
     volumes:
       - ./data:/var/lib/postgresql/data
-    restart: unless-stopped
