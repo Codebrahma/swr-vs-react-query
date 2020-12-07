@@ -3,17 +3,14 @@ import { dehydrate } from "react-query/hydration";
 import getPosts from "../lib/get-posts-graphql";
 
 export default function GraphQLPage() {
-  // Setting the `staleTime` to `Infinity` will ensure that the `query` never goes stale.
-  // 👀 https://react-query.tanstack.com/docs/api#querycache
-
-  // Option 1: Prefetching the data ourself and pass it in as `initialData`. In this case, the prop posts should be passed from `getServerSideProps`. Our function should look like: `export default function IndexPage({ posts }) {`
+  // Approach 1: Prefetching the data ourself and pass it in as `initialData`. In this case, the prop posts should be passed from `getServerSideProps`. Our function should look like: `export default function IndexPage({ posts }) {`
   // 👀 https://react-query.tanstack.com/docs/guides/ssr#prefetch-the-data-yourself-and-pass-it-in-as-initialdata
   // const { status, data, error, isFetching } = useQuery("posts", getPosts, {
   //   initialData: posts,
   //   staleTime: Infinity,
   // });
 
-  // Option 2: Prefetching the query via React Query and use `de/rehydration`
+  // Approach 2: Prefetching the query via React Query and use `de/rehydration`
   // 👀 https://react-query.tanstack.com/docs/guides/ssr#prefetch-the-query-via-react-query-and-use-derehydration
   const { status, data, error, isFetching } = useQuery("posts", getPosts, {
     staleTime: Infinity,
@@ -49,7 +46,7 @@ export async function getServerSideProps() {
   // 👀 https://react-query.tanstack.com/docs/api#querycache
   const queryCache = new QueryCache();
 
-  // The next line should be uncommented if we want to use Option 1. `posts` will contain all the data that the API endpoint returns.
+  // The next line should be uncommented if we want to use approach 1. `posts` will contain all the data that the API endpoint returns.
   // const posts = await getPosts();
 
   // `prefetchQuery` is an asynchronous function that can fetch and cache a query response before it is needed or rendered with `useQuery`.
@@ -62,7 +59,7 @@ export async function getServerSideProps() {
       // 👀 https://react-query.tanstack.com/docs/api#hydrationdehydrate
       dehydratedState: dehydrate(queryCache),
 
-      // The next line should be uncommented if we want to use Option 1.
+      // The next line should be uncommented if we want to use approach 1.
       // posts,
     },
   };

@@ -38,7 +38,7 @@ export default function GraphQLPage() {
           </div>
         );
       })}
-      {isValidating && <span>Updaing data...</span>}
+      {isValidating && <span>Updating data...</span>}
     </div>
   );
 }
